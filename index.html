@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PURENEX | Next-Level Purity</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind to use Inter font and a clean color scheme -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'purenex-blue': '#0A387E', // Deep, authoritative blue
+                        'purenex-aqua': '#00C4CC', // Bright, fresh aqua
+                        'purenex-light': '#F5F9FF', // Off-white/light blue background
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        /* Smooth scrolling for navigation */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="font-sans bg-white text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="#home" class="text-3xl font-extrabold text-purenex-blue tracking-tighter">
+                    PURENEX
+                </a>
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-purenex-aqua transition duration-150 py-2">Home</a>
+                    <a href="#process" class="text-gray-600 hover:text-purenex-aqua transition duration-150 py-2">Our Process</a>
+                    <a href="#about" class="text-gray-600 hover:text-purenex-aqua transition duration-150 py-2">About Us</a>
+                    <a href="#contact" class="text-gray-600 hover:text-purenex-aqua transition duration-150 py-2">Contact</a>
+                </nav>
+                <!-- Mobile Menu Button (Hamburger) -->
+                <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-purenex-aqua p-2 rounded-lg">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <a href="#home" class="block px-4 py-2 text-gray-700 hover:bg-gray-50">Home</a>
+            <a href="#process" class="block px-4 py-2 text-gray-700 hover:bg-gray-50">Our Process</a>
+            <a href="#about" class="block px-4 py-2 text-gray-700 hover:bg-gray-50">About Us</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-700 hover:bg-gray-50">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Hero Section -->
+        <section id="home" class="relative overflow-hidden pt-20 pb-16 md:pt-32 md:pb-24 bg-purenex-light">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid md:grid-cols-2 gap-12 items-center">
+                <!-- Text Content -->
+                <div class="text-center md:text-left">
+                    <h1 class="text-5xl md:text-7xl font-extrabold text-purenex-blue leading-tight mb-4">
+                        PURENEX
+                    </h1>
+                    <p class="text-3xl md:text-4xl text-purenex-aqua font-light mb-8">
+                        Next-Level Purity.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-10 max-w-lg mx-auto md:mx-0">
+                        Experience water purified by the most advanced, multi-stage process for unparalleled freshness and quality.
+                    </p>
+                    <a href="#process" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full shadow-lg text-white bg-purenex-aqua hover:bg-purenex-blue transition duration-300 transform hover:scale-105">
+                        Discover Our Purity Process
+                    </a>
+                </div>
+                <!-- Image Placeholder (Professional water splash) -->
+                <div class="hidden md:block">
+                    <img src="https://media.istockphoto.com/id/454273399/photo/pouring-water-from-bottle-into-glass-on-blue-background.jpg?s=612x612&w=0&k=20&c=0SLUO53_48thzcpFVLrEiF9Yb8jTbKmO0acUpWsC3yg=" 
+                         alt="Professional image of pure, clean water source" 
+                         class="w-full h-auto rounded-xl shadow-2xl transform hover:scale-[1.02] transition duration-500 ease-in-out">
+                </div>
+            </div>
+            <!-- Decorative wave element -->
+            <div class="absolute bottom-0 left-0 w-full h-20 bg-white transform translate-y-1/2 rounded-t-[50%]"></div>
+        </section>
+
+        <!-- 2. Water Process Section (RO+UV+OG) -->
+        <section id="process" class="py-16 md:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center text-purenex-blue mb-12">The PURENEX Purification Standard</h2>
+                <p class="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto">
+                    We combine three powerful technologies to deliver the cleanest, freshest water RO + UV + OG
+                </p>
+
+                <div class="grid md:grid-cols-3 gap-10">
+                    
+                    <!-- RO (Reverse Osmosis) Card -->
+                    <div class="bg-purenex-light p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border-b-4 border-purenex-blue">
+                        <div class="text-purenex-blue mb-4">
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8V6m0 12v-2"/></svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-purenex-blue mb-3">RO (Reverse Osmosis)</h3>
+                        <p class="text-gray-700">
+                            Our RO stage uses a semi-permeable membrane to effectively remove dissolved solids, salts, and heavy metals, ensuring the water is fundamentally clean from mineral impurities.
+                        </p>
+                    </div>
+
+                    <!-- UV (Ultraviolet) Card -->
+                    <div class="bg-purenex-light p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border-b-4 border-purenex-aqua">
+                        <div class="text-purenex-aqua mb-4">
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13c0 1.657-1.343 3-3 3H9zm12 0l-3 3m0 0l-3 3m3-3v3m-3-3l-3 3"/></svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-purenex-blue mb-3">UV (Ultraviolet Sterilization)</h3>
+                        <p class="text-gray-700">
+                            The UV light exposure inactivates bacteria, viruses, and other harmful microorganisms by destroying their DNA, guaranteeing 100% microbiological safety without chemicals.
+                        </p>
+                    </div>
+
+                    <!-- OG (Oxygen/Ozonation) Card -->
+                    <div class="bg-purenex-light p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border-b-4 border-purenex-blue">
+                        <div class="text-purenex-blue mb-4">
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-purenex-blue mb-3">OG (Oxygenation / Ozone)</h3>
+                        <p class="text-gray-700">
+                            This final stage enhances the taste, clarity, and overall quality of the water by introducing oxygen (or ozone) to ensure a refreshing and invigorating drink.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. About Us Section -->
+        <section id="about" class="py-16 md:py-24 bg-purenex-light">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <!-- Image Placeholder (People/Factory/Lab) -->
+                    <div class="order-2 md:order-1">
+                        <img src="https://media.istockphoto.com/id/1352891555/photo/female-engineer-working-on-maintenance-in-bottling-plant.jpg?s=612x612&w=0&k=20&c=hYmCmjwUrZPde8W7_OKwoWPCQPKSVZC0QTTrEQWyxA8=" 
+                             alt="Professional image of a modern bottling facility or lab" 
+                             class="w-full h-auto rounded-xl shadow-2xl">
+                    </div>
+                    <!-- Text Content -->
+                    <div class="order-1 md:order-2">
+                        <h2 class="text-4xl font-bold text-purenex-blue mb-6">Our Mission: Trust and Excellence</h2>
+                        <p class="text-lg text-gray-700 mb-4">
+                            Purenex was founded on the belief that everyone deserves access to water of the highest possible standard. We are not just purifying water; we are setting a new benchmark for purity, freshness, and safety.
+                        </p>
+                        <p class="text-lg text-gray-700 mb-4">
+                            Our team of water science experts is committed to rigorous testing and sustainable practices, ensuring that every bottle of Purenex meets—and exceeds—global health and quality standards.
+                        </p>
+                        <ul class="list-disc list-inside text-gray-600 text-base space-y-2">
+                            <li>Dedicated to superior taste and mineral balance.</li>
+                            <li>Eco-friendly sourcing and bottling processes.</li>
+                            <li>Continuous innovation in purification technology.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Contact Us / Privacy Policy Section -->
+        <section id="contact" class="py-16 md:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center text-purenex-blue mb-12">Get In Touch</h2>
+                
+                <div class="grid md:grid-cols-3 gap-10">
+                    <!-- Contact Card -->
+                    <div class="md:col-span-1 bg-purenex-blue text-white p-8 rounded-xl shadow-xl">
+                        <h3 class="text-2xl font-bold mb-4">Contact Information</h3>
+                        <p class="mb-6">We're here to answer your questions about our products, quality, or partnerships.</p>
+                        <div class="space-y-3">
+                            <p class="flex items-center">
+                                <!-- Email Icon -->
+                                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26c.49.32 1.05.48 1.61.48s1.12-.16 1.61-.48L21 8m-17 0V6a2 2 0 012-2h14a2 2 0 012 2v2m-18 0V18a2 2 0 002 2h14a2 2 0 002-2v-2"/></svg>
+                                <a href="mailto:info@purenexwater.com" class="hover:underline">info@purenexwater.com</a>
+                            </p>
+                            <p class="flex items-center">
+                                <!-- Phone Icon -->
+                                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498A1 1 0 0121 16.72V19a2 2 0 01-2 2h-1c-2.485 0-4.834-.98-6.59-2.736C7.26 14.834 5.92 12.485 5.92 10.005v-.005H5a2 2 0 01-2-2v-1"/></svg>
+                                <span>+91 98765 43210</span>
+                            </p>
+                            <p class="flex items-center">
+                                <!-- Location Icon -->
+                                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9A1.998 1.998 0 0110.518 20.9l-4.243-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                <span>Corporate Office, India</span>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Form Placeholder (Simple Inquiry) -->
+                    <div class="md:col-span-2 bg-gray-50 p-8 rounded-xl shadow-xl">
+                        <h3 class="text-2xl font-bold text-purenex-blue mb-4">Send Us a Quick Message</h3>
+                        <form onsubmit="event.preventDefault(); showMessage('Thank you for your message! We will be in touch soon.');" class="space-y-4">
+                            <div>
+                                <input type="text" placeholder="Your Name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-purenex-aqua focus:border-purenex-aqua" required>
+                            </div>
+                            <div>
+                                <input type="email" placeholder="Your Email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-purenex-aqua focus:border-purenex-aqua" required>
+                            </div>
+                            <div>
+                                <textarea placeholder="Your Message or Inquiry" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-purenex-aqua focus:border-purenex-aqua" required></textarea>
+                            </div>
+                            <button type="submit" class="w-full px-6 py-3 text-lg font-medium rounded-lg text-white bg-purenex-aqua hover:bg-purenex-blue transition duration-300">
+                                Submit Message
+                            </button>
+                            <div id="status-message" class="mt-4 text-center font-medium text-green-600"></div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+        <!-- 5. Privacy Policy (In-page Section) -->
+        <section id="privacy" class="py-16 md:py-24 bg-purenex-light">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center text-purenex-blue mb-12">Privacy Policy</h2>
+                
+                <div class="bg-white p-8 rounded-xl shadow-xl max-w-4xl mx-auto">
+                    <h3 class="text-2xl font-semibold text-purenex-blue mb-4">Introduction</h3>
+                    <p class="text-gray-700 mb-6">
+                        At Purenex, we respect your privacy and are committed to protecting your personal data. This policy outlines how we handle the information we collect through this website.
+                    </p>
+
+                    <h4 class="text-xl font-semibold text-gray-800 mb-3">1. Information We Collect</h4>
+                    <p class="text-gray-700 mb-4">
+                        We collect information you provide directly to us when you use our contact form, such as your name and email address. We may also collect anonymized usage data via cookies to improve site performance.
+                    </p>
+
+                    <h4 class="text-xl font-semibold text-gray-800 mb-3">2. How We Use Your Information</h4>
+                    <p class="text-gray-700 mb-4">
+                        We use your contact information solely to respond to your inquiries and, if consented, to send you updates about our products and promotions. We do not sell or share your personal data with third parties for marketing purposes.
+                    </p>
+                    
+                    <h4 class="text-xl font-semibold text-gray-800 mb-3">3. Data Security</h4>
+                    <p class="text-gray-700">
+                        We implement appropriate technical and organizational measures to protect your personal data against unauthorized access, disclosure, alteration, or destruction.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-purenex-blue text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+            
+            <!-- Logo & Slogan -->
+            <div>
+                <a href="#home" class="text-2xl font-extrabold tracking-tighter hover:text-purenex-aqua transition duration-300">PURENEX</a>
+                <p class="mt-2 text-purenex-aqua font-light">The Source of Trust</p>
+            </div>
+            
+            <!-- Navigation Links -->
+            <div>
+                <h4 class="text-xl font-semibold mb-4 text-purenex-aqua">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="#process" class="hover:text-purenex-aqua transition duration-150">Our Purification Process</a></li>
+                    <li><a href="#about" class="hover:text-purenex-aqua transition duration-150">About Us</a></li>
+                    <li><a href="#contact" class="hover:text-purenex-aqua transition duration-150">Get in Touch</a></li>
+                </ul>
+            </div>
+
+            <!-- Legal & Copyright -->
+            <div>
+                <h4 class="text-xl font-semibold mb-4 text-purenex-aqua">Legal</h4>
+                <p class="text-sm mb-2">&copy; <span id="current-year"></span> Purenex. All rights reserved.</p>
+                <a href="#privacy" class="text-sm hover:text-purenex-aqua transition duration-150 underline">View Privacy Policy</a>
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        // Get current year for copyright notice
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle Logic
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Function to show custom status message (replaces alert/confirm)
+        function showMessage(msg) {
+            const statusDiv = document.getElementById('status-message');
+            statusDiv.textContent = msg;
+            setTimeout(() => {
+                statusDiv.textContent = '';
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
